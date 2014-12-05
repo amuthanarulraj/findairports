@@ -15,7 +15,8 @@
   },
   "scripts": {
       "start": "node app.js",
-      "test": "./node_modules/.bin/mocha tests/airport-test.js"
+      "test": "./node_modules/.bin/mocha tests/airport-test.js",
+      "load_data": "node ./scripts/load_airports.js"
   },
   "repository": {
     "type": "git",
