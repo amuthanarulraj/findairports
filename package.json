@@ -1,0 +1,25 @@
+{
+  "name": "findairports",
+  "version": "0.0.1",
+  "description": "A Simple nodejs app to find near by airports",
+  "main": "app.js",
+  "dependencies": {
+    "express": "~4.10.4",
+    "mongoose": "~3.8.20"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/amuthanarulraj/findairports.git"
+  },
+  "keywords": [
+    "airports"
+  ],
+  "author": "Amuthan Arulraj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amuthanarulraj/findairports/issues"
+  },
+  "homepage": "https://github.com/amuthanarulraj/findairports"
+}
