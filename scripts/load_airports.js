@@ -32,8 +32,7 @@ var readStream = fs.createReadStream(__dirname + '/../data/airports.dat')
                 city: sanitze(tokens[2]),
                 country: sanitze(tokens[3]),
                 faaCode: sanitze(tokens[4]),
-                latitude: latitude,
-                longitude: longitude
+                loc: [longitude, latitude]
             });
 
             //Save airport only if latitude and longitude are present

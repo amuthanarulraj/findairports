@@ -19,15 +19,18 @@ module.exports = function(app) {
                 throw err;
             }
             files.forEach(function (file) {
-                var fileName = file.replace('.js', '');
-                console.log('Adding ' + fileName);
-                require(path + '/' + fileName)(app);
+                console.log('Adding ' + file);
+                if (app) {
+                    require(path + '/' + file)(app);
+                } else {
+                    require(path + '/' + file);
+                }
             });
         });
     }
     
     //Adding Models
-    boot(modelsPath, app);
+    boot(modelsPath);
     //Adding Controllers
     boot(controllersPath, app);
 }
