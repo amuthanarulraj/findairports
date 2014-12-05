@@ -7,7 +7,6 @@ var express = require('express'),
 //Initializing db connection
 mongoose.connect(dbURL);
 
-//app.set('mongoose', mongoose);
 app.set('port', port);
 
 //Bootstraping controllers and models
