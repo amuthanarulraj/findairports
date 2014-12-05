@@ -22,4 +22,4 @@ npm start
 npm test
 ```
 
-Airports geolocation used is provide by [OpenFlights](http://openflights.org/data.html)
+Airports geolocation used is provided by [OpenFlights](http://openflights.org/data.html)
