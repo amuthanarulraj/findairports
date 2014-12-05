@@ -16,3 +16,5 @@ require('./server/bootstrap')(app);
 app.listen(port, function () {
     console.log('FindAirports server running on port ' + port);
 });
+
+module.exports = app;

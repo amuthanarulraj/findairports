@@ -14,7 +14,7 @@ module.exports = function (app) {
         airportService.getCloseByAirports(code, function (err, data) {
             if (err) {
                 statusCode = 500;
-                resData = err;
+                resData = 'Error occurred while processing the request';
             } else {
                 //Convert to GeoJson
                 resData = geoJsonService.airportListGeoJson(data);
