@@ -1,7 +1,7 @@
 FindAirports
 ============
 
-This is a demo app to searh close by airports. 
+This is a demo app to search close by airports. 
 
 `
 GET /airportsearch/:FAACODE
