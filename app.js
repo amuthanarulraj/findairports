@@ -11,7 +11,7 @@ mongoose.connect(dbURL);
 app.set('port', port);
 
 //Bootstraping controllers and models
-require('./server/bootstrap')(app);
+require('./server/bootstrap');
 
 app.listen(port, function () {
     console.log('FindAirports server running on port ' + port);
