@@ -11,7 +11,7 @@ mongoose.connect(dbURL);
 require(__dirname + '/../server/models/Airport');
 
 var User = mongoose.model('Airport'),
-    sanitze = function (token) {
+    sanitize = function (token) {
         return token.substring(1, token.length -1);
     };
 
