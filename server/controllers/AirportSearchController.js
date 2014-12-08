@@ -5,22 +5,15 @@ var app = require('./../../app'),
 /*
   Returns geojson of airports close to search airport code.
 */
-app.get('/airportsearch/:code', function (req, res) {
-    var code = req.param('code'),
-        statusCode = 200, 
-        resData; 
+app.get('/airportsearch/:code', function (req, res, next) {
+    var faaCode = req.param('code'); 
 
-    airportService.getCloseByAirports(code, function (err, data) {
+    airportService.getCloseByAirports(faaCode, function (err, data) {
         if (err) {
-            statusCode = 500;
-            resData = 'Error occurred while processing the request';
-        } else {
-            //Convert to GeoJson
-            resData = geoJsonService.airportListGeoJson(data);
+            return next(err);
         }
+        var geojson = geoJsonService.airportListGeoJson(data);
         res.set('Content-Type', 'application/vnd.geo+json');
-        res.status(statusCode);
-        res.send(resData);
-        res.end();
+        res.status(200).send(geojson);
     });
 });

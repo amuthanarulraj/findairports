@@ -18,6 +18,15 @@ describe('Airport Search', function () {
         .expect(geojson)
         .end(done)
       });
+      
+      it('Invalid FAA Code', function (done) {
+        supertest(app)
+        .get('/airportsearch/INVALID')
+        .expect('Content-Type', 'application/vnd.geo+json; charset=utf-8')
+        .expect(200)
+        .expect(geojson)
+        .end(done)
+      });
         
     });
 });
