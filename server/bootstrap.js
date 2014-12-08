@@ -1,8 +1,7 @@
 var path = require('path'),
     fs = require('fs'),
-    baseDir = __dirname,
-    controllersPath = baseDir + '/controllers',
-    modelsPath = baseDir + '/models';
+    controllersPath = __dirname + '/controllers',
+    modelsPath = __dirname + '/models';
 
 /*
   Boot application objects.
