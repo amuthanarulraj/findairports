@@ -6,8 +6,7 @@ This is a simple demo app to search close by airports using Node.js, Express.js,
 
 ##Environment Setup
 
-To run the app, mongodb server should be running and db url should be updated on both `app.js` and `./scripts/load_airports.js`. All airport data can be loaded using below command.
-
+To run the app, mongodb server should be running and db url should be updated on both `app.js` and `./scripts/load_airports.js`. All airports data can be loaded using below command.
 ```
 npm install
 npm load_data
@@ -129,4 +128,5 @@ If the airport is not found then, below error message JSON is returned.
 ##License
 
 [MIT](http://opensource.org/licenses/MIT)
+
 Airports geolocation used is provided by [OpenFlights](http://openflights.org/data.html)
