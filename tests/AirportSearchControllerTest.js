@@ -22,9 +22,18 @@ describe('Airport Search', function () {
       it('Invalid FAA Code', function (done) {
         supertest(app)
         .get('/airportsearch/INVALID')
-        .expect('Content-Type', 'application/vnd.geo+json; charset=utf-8')
-        .expect(200)
-        .expect(geojson)
+        .expect('Content-Type', 'application/json; charset=utf-8')
+        .expect(404)
+        .expect('{"url":"/airportsearch/INVALID","error":"Page Not found"}')
+        .end(done)
+      });
+      
+      it('No FAA Code', function (done) {
+        supertest(app)
+        .get('/airportsearch/')
+        .expect('Content-Type', 'application/json; charset=utf-8')
+        .expect(404)
+        .expect('{"url":"/airportsearch/","error":"Page Not found"}')
         .end(done)
       });
         
